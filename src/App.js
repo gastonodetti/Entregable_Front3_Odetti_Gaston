@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Cabecera from './components/Cabecera'
 import Listado from './components/Listado'
 
@@ -10,10 +11,16 @@ import Listado from './components/Listado'
 
 function App() {
 
+  const [itemsCounter, setItemsCounter] = useState(0)
+
+  const addItem = () => {
+    setItemsCounter(itemsCounter + 1)
+  }
+
   return (
     <div className="App">
-      <Cabecera />
-      <Listado />
+      <Cabecera items={itemsCounter} />
+      <Listado addItem={addItem}/>
     </div>
   );
 }
