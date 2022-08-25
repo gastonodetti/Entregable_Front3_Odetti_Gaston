@@ -14,7 +14,6 @@ export default function Listado(props) {
   const renderItems = (array) => {
     return (
     array.map(item => {
-      console.log(item)
       return (
         <Item nombre={item.producto.nombre} descripcion={item.producto.descripcion} stock={item.stock} addItem={props.addItem}/>
       )

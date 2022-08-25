@@ -12,10 +12,10 @@ export default function Cabecera(props) {
   
   return (
     <header>
-        {<div>
+        <div>
           <h1>Carrito de compras</h1>
           <p>Cantidad de productos <span>{props.items}</span></p>  
-        </div>}
+        </div>
     </header>
   )
 }

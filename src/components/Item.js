@@ -22,7 +22,7 @@ export default function Item(props) {
         <p>{props.descripcion}</p>
         <h5>En stock: <span>{stock ? availableStock : 'agotado'}</span></h5>
         <button 
-          disabled={stock ? false : true} 
+          disabled={!stock} 
           onClick={() => {
             setAvailableStock(availableStock - 1)
             props.addItem()
