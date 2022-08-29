@@ -20,7 +20,7 @@ export default function Item(props) {
     <div className='producto'>
         <h3>{props.nombre}</h3>
         <p>{props.descripcion}</p>
-        <h5>En stock: <span>{stock ? availableStock : 'agotado'}</span></h5>
+        <h5>En stock: {stock ? availableStock : <span>agotado</span>}</h5>
         <button 
           disabled={!stock} 
           onClick={() => {
