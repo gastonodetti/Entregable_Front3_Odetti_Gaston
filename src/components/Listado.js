@@ -15,7 +15,7 @@ export default function Listado(props) {
     return (
     array.map(item => {
       return (
-        <Item nombre={item.producto.nombre} descripcion={item.producto.descripcion} stock={item.stock} addItem={props.addItem}/>
+        <Item key={item.producto.nombre} nombre={item.producto.nombre} descripcion={item.producto.descripcion} stock={item.stock} addItem={props.addItem}/>
       )
     })
     )
